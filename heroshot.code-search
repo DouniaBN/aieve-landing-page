@@ -1,0 +1,9 @@
+# Query: heroshot
+# ContextLines: 1
+
+1 result - 1 file
+
+src/components/Hero.tsx:
+  41                <img
+  42:                 src="/public/heroshot.png"
+  43                  alt="AIEVE Dashboard Screenshot"
