@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero = ({ onGetEarlyAccess }: HeroProps) => {
   return (
-    <section className="pt-24 pb-16 bg-[#FAFAFA]">
+    <section className="pt-24 pb-16 bg-[#FAFAFA] overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-12">
           {/* Centered Content */}
