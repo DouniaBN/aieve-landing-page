@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
@@ -11,38 +12,18 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 
-function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
+const HomePage = () => {
   const scrollToEarlyAccess = () => {
     const element = document.getElementById('early-access');
     if (element) {
-      const yOffset = -100; // Offset to show the heading properly
+      const yOffset = -100;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
-  if (currentPath === '/privacy-policy') {
-    return <PrivacyPolicy />;
-  }
-
-  if (currentPath === '/terms-of-service') {
-    return <TermsOfService />;
-  }
-
   return (
-    <div className="font-['Inter',sans-serif] antialiased">
-      <Header />
+    <>
       <Hero onGetEarlyAccess={scrollToEarlyAccess} />
       <Problem />
       <Solution />
@@ -62,8 +43,23 @@ function App() {
       </section>
       <EarlyAccess />
       <FAQ />
-      <Footer />
-    </div>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div className="font-['Inter',sans-serif] antialiased">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

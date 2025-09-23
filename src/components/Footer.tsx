@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -31,10 +32,10 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+                <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a>
+                <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
               </li>
             </ul>
           </div>
