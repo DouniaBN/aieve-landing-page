@@ -39,7 +39,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
           <div className="relative max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative">
               <img
-                src="/public/heroshot.png"
+                src="/heroshot.png"
                 alt="AIEVE Dashboard Screenshot"
                 className="w-full h-auto"
               />
