@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,18 +17,29 @@ const Header = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // If on another page, navigate to home page
+      navigate('/');
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <img 
-              src="/13970D26-B6B0-4C20-8A4A-C633E603EE6F_4_5005_c-removebg-preview.png" 
-              alt="AIEVE Logo" 
+          <button onClick={handleLogoClick} className="flex items-center hover:opacity-80 transition-opacity">
+            <img
+              src="/13970D26-B6B0-4C20-8A4A-C633E603EE6F_4_5005_c-removebg-preview.png"
+              alt="AIEVE Logo"
              className="h-10 w-auto"
             />
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
