@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
@@ -58,6 +59,7 @@ function App() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
