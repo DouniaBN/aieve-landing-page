@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabase';
+import SignupModal from './SignupModal';
 
 const EarlyAccess = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState('');
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,8 +48,9 @@ const EarlyAccess = () => {
         }
       } else {
         setStatus('success');
-        setMessage("You're on the list! We'll be in touch soon.");
+        setSubmittedEmail(email);
         setEmail('');
+        setShowModal(true);
       }
     } catch (error) {
       console.error('Error saving email:', error);
@@ -54,11 +58,13 @@ const EarlyAccess = () => {
       setMessage('Something went wrong. Please try again.');
     }
 
-    // Reset status after 5 seconds
-    setTimeout(() => {
-      setStatus('idle');
-      setMessage('');
-    }, 5000);
+    // Reset status after 5 seconds (only for error states)
+    if (status === 'error') {
+      setTimeout(() => {
+        setStatus('idle');
+        setMessage('');
+      }, 5000);
+    }
   };
 
   return (
@@ -89,10 +95,8 @@ const EarlyAccess = () => {
             </button>
           </div>
           
-          {message && (
-            <p className={`mt-4 text-sm ${
-              status === 'error' ? 'text-red-600' : 'text-green-600'
-            }`}>
+          {message && status === 'error' && (
+            <p className="mt-4 text-sm text-red-600">
               {message}
             </p>
           )}
@@ -101,6 +105,15 @@ const EarlyAccess = () => {
             Join the waitlist for exclusive early access.
           </p>
         </form>
+
+        <SignupModal
+          isOpen={showModal}
+          onClose={() => {
+            setShowModal(false);
+            setStatus('idle');
+          }}
+          email={submittedEmail}
+        />
       </div>
     </section>
   );
