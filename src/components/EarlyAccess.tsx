@@ -32,30 +32,43 @@ const EarlyAccess = () => {
     setStatus('loading');
     setMessage('');
 
+    // Show modal immediately for better UX while database saves
+    const userEmail = email.toLowerCase().trim();
+    setSubmittedEmail(userEmail);
+    setShowModal(true);
+    setEmail('');
+
     try {
-      const { error } = await supabase
+      console.log('🔄 Attempting to save email:', userEmail);
+
+      const { data, error } = await supabase
         .from('early_access_signups')
         .insert([
-          { email: email.toLowerCase().trim() }
-        ]);
+          { email: userEmail }
+        ])
+        .select();
 
       if (error) {
+        console.error('❌ Email signup error:', error);
         if (error.code === '23505') { // Unique constraint violation
           setStatus('error');
           setMessage("You're already on our waitlist!");
+          setShowModal(false); // Close modal on error
         } else {
+          setShowModal(false); // Close modal on error
           throw error;
         }
       } else {
+        console.log('✅ Email signup successful:', data);
         setStatus('success');
-        setSubmittedEmail(email);
-        setEmail('');
-        setShowModal(true);
+        // Modal already opened above for instant UX
+        console.log('🎯 Modal already open for:', userEmail);
       }
     } catch (error) {
-      console.error('Error saving email:', error);
+      console.error('❌ Unexpected error saving email:', error);
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
+      setShowModal(false); // Close modal on error
     }
 
     // Reset status after 5 seconds (only for error states)
