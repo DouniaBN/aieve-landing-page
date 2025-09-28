@@ -179,7 +179,7 @@ const SignupModal: React.FC<SignupModalProps> = ({ isOpen, onClose, email }) => 
 
               <div className="bg-gray-50 rounded-lg p-2 mb-4">
                 <p className="text-xs text-gray-600">
-                  Confirmation sent to:
+                  We'll contact you at:
                 </p>
                 <p className="font-medium text-[#1C2D5A] text-xs mt-0.5">
                   {email}
