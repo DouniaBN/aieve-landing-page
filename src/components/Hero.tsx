@@ -29,9 +29,6 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
               <div className="bg-pink-50 border border-pink-200 text-[#1C2D5A] px-3 py-1.5 rounded-full text-xs font-medium">
                 Built by a creator for creators
               </div>
-              <div className="bg-blue-50 border border-blue-200 text-[#EC4899] px-3 py-1.5 rounded-full text-xs font-medium">
-                Free
-              </div>
             </div>
           </div>
 
