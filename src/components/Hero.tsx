@@ -25,7 +25,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
             </button>
             
             {/* Promotional Bubbles */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
               <div className="bg-pink-50 border border-pink-200 text-[#1C2D5A] px-3 py-1.5 rounded-full text-xs font-medium">
                 Built by a creator for creators
               </div>
@@ -33,10 +33,10 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
           </div>
 
           {/* Centered Dashboard Screenshot */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-none mx-auto px-4">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative">
               <img
-                src="/heroshot.png"
+                src="/Dashboard screenshot.png"
                 alt="AIEVE Dashboard Screenshot"
                 className="w-full h-auto"
               />
