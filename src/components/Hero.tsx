@@ -47,7 +47,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
           <div className="relative max-w-none mx-auto px-6 md:px-4">
             <div className="bg-white rounded-lg md:rounded-2xl shadow-2xl overflow-hidden relative transform scale-125 md:scale-100 mx-auto w-[95%] md:w-full">
               <img
-                src="/Dashboard screenshot.png"
+                src="/new_dashboard.png"
                 alt="AIEVE Dashboard Screenshot"
                 className="w-full h-auto"
               />
