@@ -7,7 +7,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Does this replace all my other tools?",
-      answer: "Yes — AIEVE replaces scattered spreadsheets, Canva invoices, Trello boards and Notion docs with an all in one tool."
+      answer: "Yes. AIEVE replaces scattered spreadsheets, Canva invoices, Trello boards and Notion docs with an all in one tool."
     },
     {
       question: "What if I'm just starting out?",
@@ -15,7 +15,7 @@ const FAQ = () => {
     },
     {
       question: "Is this free?",
-      answer: "Yes! AIEVE is completely free while we build and refine the tool. Get early access now!"
+      answer: "Yes! AIEVE is free while we build and refine the tool. Get early access now!"
     },
     {
       question: "Is this just another scheduling app?",

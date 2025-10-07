@@ -7,12 +7,12 @@ const Features = () => {
     "Multi-platform content calendar",
     "Invoice generation & payment tracking",
     "Project timelines & deliverables",
-    "Visual, intuitive dashboard to see your whole business at a glance",
+    "Intuitive dashboard to see your whole business at a glance",
     "Grow your platforms with a plan that keeps you consistent"
   ];
 
   return (
-    <section id="features" className="py-20 bg-[#FAFAFA]">
+    <section id="features" className="pt-20 pb-12 bg-[#FAFAFA]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1C2D5A] mb-4">
