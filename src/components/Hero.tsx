@@ -17,14 +17,14 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
         <div className="text-center space-y-14 md:space-y-12">
           {/* Centered Content */}
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 relative">
-            <Sparkles className="absolute left-2 top-10 w-4 h-4 text-purple-400 opacity-30 md:hidden" />
+            <Sparkles className="absolute left-2 top-10 w-4 h-4 text-purple-400 opacity-20 md:hidden" />
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#1C2D5A] leading-normal md:leading-tight">
-             Run Your <span>Creator Business</span> Like a Real Business
+             Ready to Run Your <span>Creator Business</span> Like a Real Business?
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              The first business management platform for creators. Track deals, manage and plan content, send professional invoices - all in one dashboard.
+              The first business management platform for content creators. Track deals, manage and plan content, send professional invoices - all in one dashboard.
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-2">
               <button
                 onClick={onGetEarlyAccess}
                 className="bg-gradient-to-r from-pink-500 to-pink-600 md:bg-gradient-to-r md:from-[#EC4899] md:to-[#DB2777] hover:bg-[#DB2777] text-white px-16 py-4 md:py-6 rounded-lg font-bold text-xl transition-all transform hover:scale-[1.02] md:hover:scale-105 hover:shadow-lg shadow-lg shadow-pink-500/30 md:shadow-lg md:shadow-black/10 inline-flex items-center justify-center gap-2"
@@ -32,6 +32,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
                 Get Early Access
                 <ArrowRight className="w-5 h-5 md:hidden" />
               </button>
+              <p className="text-xs text-[#1C2D5A]">join 40+ creators</p>
             </div>
             
             {/* Promotional Bubbles */}
