@@ -32,7 +32,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
                 Get Early Access
                 <ArrowRight className="w-5 h-5 md:hidden" />
               </button>
-              <p className="text-xs text-[#1C2D5A]">join 40+ creators</p>
+              <p className="text-xs text-[#1C2D5A]">join 50+ creators</p>
             </div>
             
             {/* Promotional Bubbles */}
@@ -48,7 +48,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
           <div className="relative max-w-none mx-auto px-6 md:px-4">
             <div className="bg-white rounded-lg md:rounded-2xl shadow-2xl overflow-hidden relative transform scale-125 md:scale-100 mx-auto w-[95%] md:w-full">
               <img
-                src="/new_dashboard.png"
+                src="/dashboard_hero.png"
                 alt="AIEVE Dashboard Screenshot"
                 className="w-full h-auto"
               />

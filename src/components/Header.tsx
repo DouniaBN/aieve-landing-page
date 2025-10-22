@@ -35,7 +35,7 @@ const Header = () => {
           {/* Logo */}
           <button onClick={handleLogoClick} className="flex items-center hover:opacity-80 transition-opacity">
             <img
-              src="/13970D26-B6B0-4C20-8A4A-C633E603EE6F_4_5005_c-removebg-preview.png"
+              src="/no-bg-logo.png"
               alt="AIEVE Logo"
              className="h-10 w-auto"
             />

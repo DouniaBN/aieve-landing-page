@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <img 
-              src="/13970D26-B6B0-4C20-8A4A-C633E603EE6F_4_5005_c-removebg-preview.png" 
-              alt="AIEVE Logo" 
+            <img
+              src="/no-bg-logo.png"
+              alt="AIEVE Logo"
              className="h-16 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-300">
