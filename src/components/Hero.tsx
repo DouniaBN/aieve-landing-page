@@ -19,10 +19,10 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 relative">
             <Sparkles className="absolute left-2 top-10 w-4 h-4 text-purple-400 opacity-20 md:hidden" />
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#1C2D5A] leading-normal md:leading-tight">
-             Ready to Run Your <span>Creator Business</span> Like a Real Business?
+             Your Creator Business,<br />Finally Organized.
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              The first business management platform for content creators. Track deals, manage and plan content, send professional invoices - all in one dashboard.
+              Track deals, plan content, send invoices—all in one dashboard. The admin platform built specifically for content creators.
             </p>
             <div className="flex flex-col items-center gap-2">
               <button
