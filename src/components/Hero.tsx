@@ -32,7 +32,7 @@ const Hero = ({ onGetEarlyAccess }: HeroProps) => {
                 Get Early Access
                 <ArrowRight className="w-5 h-5 md:hidden" />
               </button>
-              <p className="text-xs text-[#1C2D5A]">join 50+ creators</p>
+              <p className="text-xs text-[#1C2D5A]">join 80+ creators</p>
             </div>
             
             {/* Promotional Bubbles */}
