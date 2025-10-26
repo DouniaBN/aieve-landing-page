@@ -41,7 +41,7 @@ src/
 - **Primary Colors**: Pink (#EC4899, #DB2777) and Navy Blue (#1C2D5A)
 - **Typography**: Inter font family
 - **Target Audience**: Content creators and influencers
-- **Value Proposition**: "Run Your Creator Business Like a Real Business"
+- **Value Proposition**: "Your Creator Business, Finally Organised"
 
 ## Available Scripts
 - `npm run dev` - Start development server
